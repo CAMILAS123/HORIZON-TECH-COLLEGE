@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizon Tech College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #3db2ff;
+      padding: 15px 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1f78b4;
+    }
+
+    header {
+      background: linear-gradient(to right, #6dd5fa, #2980b9);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #006d77;
+    }
+
+    /* ACCORDION */
+    .accordion-item {
+      background: #f0fdfd;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .accordion-header {
+      padding: 18px 20px;
+      background-color: #00b4d8;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .accordion-body {
+      display: none;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+
+    .accordion-header::after {
+      content: "+";
+      font-size: 1.5em;
+    }
+
+    .accordion-item.active .accordion-header::after {
+      content: "-";
+    }
+
+    /* FORM STYLES */
+    form {
+      background: #f2fefc;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      border-color: #00a8cc;
+      outline: none;
+    }
+
+    .btn button {
+      background-color: #00a896;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn button:hover {
+      background-color: #028090;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #caf0f8;
+      color: #333;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+      font-size: 0.95em;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to the Home of Technology</h1>
+    <p>The only place where you can meet the horizon of success.</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Horizon Tech College is located in Morogoro along Dar es Salaam road.
+      We proudly nurture future tech leaders and creators. Join our mission to transform Tanzania digitally!
+    </p>
+  </section>
+
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">Basic Computer Applications</div>
+        		<p>Learn Microsoft Word, Excel, PowerPoint, email, internet use & typing.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Software Development</div>
+      		<p>Get introduced to HTML, CSS, JavaScript, Python and build real applications.</p>
+          
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">PC Diagnosis & Maintenance</div>
+      		<p>Understand hardware components, fix and upgrade PCs and laptops.</p> 
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Graphics & Design</div>
+      		<p>Design posters, banners, logos using Photoshop, Canva, Illustrator, and more.</p>
+          
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Multimedia & Video Production</div>
+      		<p>  Create stunning video content for YouTube, advertising, and TV with pro tools</p>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      <select id="gender" name="gender" required>
+        <option value="">--Select Gender--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" id="phone" name="phone" placeholder="+255 712 345 678" required>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <div class="btn">
+        <button type="submit">Send</button>
+      </div>
+      <div class="message" id="responseMessage">Thank you for contacting us, we will pass through your message soon.</div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Horizon Tech College. All rights reserved.</
